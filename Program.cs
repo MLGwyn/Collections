@@ -40,6 +40,26 @@ namespace Collections
       var indexOfTwelve = scores.LastIndexOf(12);
       Console.WriteLine($"Found 12 at index {indexOfTwelve}");
 
+      var playerScores = new Dictionary<string, int>();
+
+      playerScores.Add("Robbie Lakeman", 1_234_567);
+      playerScores["Robbie Lakeman"] = 3;
+      playerScores["Gavin Stark"] = 42;
+
+
+      var robbiePlayerScore = playerScores["Robbie Lakeman"];
+      Console.WriteLine(robbiePlayerScore);
+
+      var gavinScore = playerScores["Gavin Stark"];
+      Console.WriteLine($"Gavin's score is {gavinScore}");
+
+      var hasKey = playerScores.ContainsKey("Billy Mitchell");
+      if (hasKey == true)
+      {
+        var billyScore = playerScores["Billy Mitchell"];
+        Console.WriteLine(billyScore);
+      }
+
 
 
 
