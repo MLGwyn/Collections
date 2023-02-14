@@ -70,17 +70,31 @@ namespace Collections
             var firstStudent = students.Dequeue();
             Console.WriteLine(firstStudent);
 
-            // foreach (var student in students)
-            // {
-            //     Console.WriteLine($"Hello {student}");
-            // }
+            //string student;
+            foreach (var studentb in students)
+            {
+                Console.WriteLine($"Hello {studentb}");
+            }
 
-            //var student = students.Dequeue();
-            //Console.WriteLine($"Goodbye {student}");
-            // Console.WriteLine($"There are now {students.Count} students in the queue.");
+            var student = students.Dequeue();
+            Console.WriteLine($"Goodbye {student}");
+            Console.WriteLine($"There are now {students.Count} students in the queue.");
 
-            // var student = students.Peek;
-            // Console.WriteLine($"You are up next {student}");
+            student = students.Peek();
+            Console.WriteLine($"You are up next {student}");
+
+            Console.Write("What is your name? (typeof quit to end) ");
+            var name = Console.ReadLine();
+
+            while (name != "quit")
+            {
+                Console.WriteLine($"Hello {name}");
+
+                Console.Write("What is your name? ");
+                name = Console.ReadLine();
+            }
+
+            var counter = 0;
 
 
 
